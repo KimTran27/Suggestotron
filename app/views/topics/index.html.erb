@@ -1,16 +1,43 @@
+
 <p id="notice"><%= notice %></p>
 
-<h1>Topics</h1>
+<h1>The Green Horizon</h1>
+<h3>Repurpose. Reuse. Recycle. Upcycle.</h3>
+<blockquote>
+      "The Green Horizon (TGH) is a 501(c)(3) nonprofit organization dedicated to worldwide environmental education with the goal of protecting a flourishing ecosystem and safeguarding the environmental rights of future generations."
+</blockquote>
+<p>Welcome! Our mission is to spread awareness of the many ways that you can contribute to our environment right from your home. You can watch Do It Yourself (DIY) videos on all sorts of crafts and methods that enable us to replenish our lives. If you have a method yourself, we invite you to upload your own video or you can just vote for your favorite video.
+</p>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th>Vote for your favorite videos!</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
+  <div class = "category_block">
+  <div><%= link_to 'Kitchen', kitchen_path %></div>
+  <img src = "https://c.o0bg.com/rf/image_371w/Boston/2011-2020/2014/09/02/BostonGlobe.com/Magazine/Images/mag0907guideA1.jpg">
+  </div>
+  <div class = "category_block">
+  <div>Bathroom</div>
+  <img src = "http://recyclenation.com/wp-content/uploads/2011/04/vintage_suitcase_vanity.jpg">
+  </div>
+  <div class = "category_block">
+  <div>Bedroom</div>
+  <img src = "http://cdn.homesthetics.net/wp-content/uploads/2015/01/42-Simply-Brilliants-Ideas-of-How-to-Recycle-Old-Car-Parts-Into-Furnishing-homesthetics-30.jpg">
+  </div>
+  <div class = "category_block">
+  <div>Living Room</div>
+  <img src = "http://www.homecrux.com/wp-content/uploads/2015/07/12-ways-to-transform-reclaimed-oil-barrels-into-winsome-furniture_1.jpg">
+  </div>
+
+
+
+
     <% @topics.each do |topic| %>
         <tr>
           <td><%= link_to topic.title, topic %></td>
@@ -25,4 +52,4 @@
 
 <br>
 
-<%= link_to 'New Topic', new_topic_path %>
+<%= link_to 'Share your idea!', new_topic_path %>
